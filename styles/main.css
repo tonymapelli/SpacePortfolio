@@ -42,10 +42,10 @@ h1{
 }
 
 h2{
-	color: white;
+	color: grey;
 	font-family:'Roboto', sans-serif;
 	text-align: center;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 2px;
 	text-transform: lowercase;
 }
@@ -192,7 +192,15 @@ hr.accent-bar {
   box-shadow: 585px 1375px #FFF , 1948px 502px #FFF , 1569px 826px #FFF , 15px 545px #FFF , 1838px 803px #FFF , 1513px 835px #FFF , 1205px 1742px #FFF , 1393px 1086px #FFF , 1832px 1472px #FFF , 147px 1109px #FFF , 660px 1403px #FFF , 79px 1674px #FFF , 153px 451px #FFF , 20px 1930px #FFF , 1393px 1129px #FFF , 986px 660px #FFF , 1695px 1273px #FFF , 373px 235px #FFF , 1681px 598px #FFF , 621px 993px #FFF , 847px 1574px #FFF , 1676px 960px #FFF , 455px 1326px #FFF , 1606px 726px #FFF , 1339px 156px #FFF , 1613px 219px #FFF , 1009px 891px #FFF , 792px 1531px #FFF , 704px 524px #FFF , 1688px 1961px #FFF , 867px 299px #FFF , 915px 1320px #FFF , 1018px 1887px #FFF , 1667px 1638px #FFF , 1016px 147px #FFF , 1518px 882px #FFF , 954px 1634px #FFF , 1387px 697px #FFF , 698px 1461px #FFF , 1873px 1691px #FFF , 855px 129px #FFF , 1221px 705px #FFF , 954px 830px #FFF , 1285px 869px #FFF , 657px 1842px #FFF , 1201px 74px #FFF , 654px 1695px #FFF , 289px 1636px #FFF , 958px 1838px #FFF , 304px 1553px #FFF , 773px 677px #FFF , 1820px 664px #FFF , 1986px 1420px #FFF , 1652px 1986px #FFF , 613px 56px #FFF , 506px 1429px #FFF , 409px 1594px #FFF , 815px 1284px #FFF , 272px 1865px #FFF , 993px 223px #FFF , 1354px 1600px #FFF , 45px 1608px #FFF , 390px 580px #FFF , 410px 233px #FFF , 1205px 278px #FFF , 1919px 169px #FFF , 1392px 428px #FFF , 222px 1016px #FFF , 1476px 1087px #FFF , 1633px 1611px #FFF , 663px 1926px #FFF , 226px 605px #FFF , 1865px 1651px #FFF , 1332px 911px #FFF , 986px 670px #FFF , 486px 1166px #FFF , 111px 976px #FFF , 925px 176px #FFF , 141px 467px #FFF , 1837px 1943px #FFF , 1995px 658px #FFF , 1844px 1518px #FFF , 1276px 235px #FFF , 1986px 637px #FFF , 1224px 498px #FFF , 1352px 1273px #FFF , 1593px 1748px #FFF , 1454px 1128px #FFF , 1079px 604px #FFF , 131px 1407px #FFF , 1941px 1156px #FFF , 1577px 1557px #FFF , 1792px 1250px #FFF , 1770px 699px #FFF , 1719px 283px #FFF , 31px 1389px #FFF , 218px 1281px #FFF , 1403px 102px #FFF , 141px 390px #FFF , 365px 817px #FFF;
 }
 
+.whiteCard{
+  background: white;
+  opacity: 0.7;
+  box-shadow: 5px 5px 7px black;
+}
 
+.white{
+  color:white;
+}
 @media screen and (min-width: 761px){
 
 	#navbarMobile{
