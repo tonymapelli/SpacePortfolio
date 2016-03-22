@@ -1,15 +1,6 @@
-
 @font-face {
-    font-family: NeueHaasGrotesk;
-    src: url(fonts/NHaasGroteskDSPro-55Rg.ttf);
-}
-@font-face {
-    font-family: NeueHaasGrotesk-Md;
-    src: url(fonts/NHaasGroteskDSPro-65Md.ttf);
-}
-@font-face {
-    font-family: NeueHaasGrotesk-Bd;
-    src: url(fonts/NHaasGroteskDSPro-75Bd.ttf);
+	font-family: 'BebasNeue-Regular';
+	src: url('../fonts/BebasNeue-Regular.ttf');
 }
 
 *{
@@ -30,6 +21,7 @@ html, body{
 h1{
 	color: white;
 	font-family:'Lato', sans-serif;
+	/*font-family:'NeueHaas-Md', sans-serif;*/
 	text-align: center;
 	font-weight: 300;
 	font-size: 50px;
@@ -43,11 +35,18 @@ h1{
 
 h2{
 	color: grey;
-	font-family:'Roboto', sans-serif;
-	text-align: center;
-	font-weight: 400;
+/*	font-family:'BebasNeue-Regular', sans-serif;
+	font-family:'NeueHaas-Md', sans-serif;*/
+	font-family:'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size:32px;
 	letter-spacing: 2px;
-	text-transform: lowercase;
+	text-transform: uppercase;
+	background: -webkit-linear-gradient(white, #38495a);
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+	margin: 0 auto;
+	padding: 1em;
 }
 
 p{
@@ -57,14 +56,14 @@ p{
 }
 
 hr.accent-bar {
-    display: block;
+    display: none;
     width: 100%;
     border: solid #1AFFD1;
     border-width: 5px 0 0;
     clear: both;
     margin: 0;
     height: 0;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     z-index: 100;
@@ -75,34 +74,117 @@ hr.accent-bar {
 	text-align: center;
 }
 #title{
-	margin: 0 auto;
+	margin: 100px 0 auto;
 	padding:20px;
 }
-#work, #blog, #resume, #contact{
+#work{
+	height:auto;
+	z-index: 2;
+	position: relative;
+} 
+#blog, #resume, #contact{
 	height: 400px;
 	margin: 10px auto;
-	text-align: center;
+	
 }
-#scrollBtn{
-	height: 20px;
-	width: 40px;
-	display: block;
-	margin: 25px auto;
-	background-color: white;
 
+#info{
+	width: 98vw;
+	height:400px;
+	background-color: #E87B7B;
+	margin: 0 auto;
+	display:none;
+	position: relative;
+	z-index:8;
+
+}
+
+#infoInside{
+	width: 98vw;
+	height:400px;
+	background-color: #E87B7B;
+	margin: 0 auto;
+	display:none;
+	position:relative;
+	z-index:8;
+
+}
+
+#container{
+	/*position:fixed;*/
+}
+
+.scrollBtn{
+  font-size: 60px;
+  font-size: 6rem;
+  margin-top: 60px;
+  margin-top: 6rem;
+  color: white;
+  animation: jump 1.5s infinite;
 }
 #navbarMobile{
 	display: block;
 	width: 100%;
-	height: 44px;
+	/*height: 44px;*/
 	background-color: white;
 	list-style:none;
+	font-family: 'Open Sans', sans-serif;
+	position: fixed;
+	/*top: 21px;*/
+	box-shadow: 5px 5px 7px black;
+	/*transform:translateY(-100%);*/
+	transition: all .3s ease-in-out;
+	z-index: 100;
 }
 
 #navbarMobile li{
-	display: inline;
-	float: left;
+	display: block;
+	float: none;
+	text-align: center;
+	height: 54px;
+	line-height: 3;
 }
+
+#navbarMobile a {
+    text-decoration: none;
+    font-size: 12px;
+    color: grey;
+    text-transform: uppercase;
+    transition: opacity .2s ease;
+    border-bottom: 1px solid #D4D8DC;
+    width: 100%;
+    display: inline-block;
+    line-height: 53px;
+}
+
+#navbarMobile ul{
+	display:none;
+}
+
+nav a#pull {
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: lowercase;
+    color: grey;
+    transition: opacity .2s ease;
+    /*border-bottom: 1px solid #D4D8DC;*/
+   	border-bottom:0px;
+    width: 100%;
+    display: block;
+    line-height: 53px;
+    background-color: #2D2D3C;
+    position:fixed;
+}
+nav a#pull:after {
+        content:"";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
 
 #navBar{
 	display: none;
@@ -193,14 +275,94 @@ hr.accent-bar {
 }
 
 .whiteCard{
-  background: white;
-  opacity: 0.7;
+  background-color: rgba(255,255,255, .8);
   box-shadow: 5px 5px 7px black;
+  position: relative;
 }
 
 .white{
   color:white;
 }
+
+/* THROWING THIS IN HERE, will clean up in a bit */
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0;
+	margin: 0 5px;
+	position:relative;
+	z-index:50;
+	/*box-shadow: 5px 5px 5px black;*/
+	/*box-shadow: 0 7px 12px -5px black;*/
+	background-color:rgba(255,255,255, 0.8);
+
+}
+
+
+
+.sectionContainer{
+	clear: both;
+	height: auto;
+	width: 100%;
+	z-index: 55;
+	position: relative;
+	background-color:rgba(255,255,255, 0.8);
+	display: block;
+	opacity: 1;
+	box-shadow: 0 7px 12px -5px black;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/*margin: 1% 0 1% .25%;*/
+	margin: 0 0 .25% .25%;
+	background-color: #C5C4C4;
+	height: 200px;
+	font-family: 'Roboto', sans-serif;
+	color: grey;
+	/*box-shadow: 0px 1px 5px;*/
+	/*box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);*/
+	text-align: center;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.93%;
+}
+.span_2_of_4 {
+	width: 49.87%;
+}
+.span_1_of_4 {
+	width: 24.81%;
+	transition: all .2s ease-in;
+}
+
+.span_1_of_4:hover{
+	transform: translate(-3px,-3px);
+	box-shadow: 3px 3px 9px -1px #484747;
+	transition: all .2s ease-in;
+
+
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
 @media screen and (min-width: 761px){
 
 	#navbarMobile{
@@ -209,8 +371,12 @@ hr.accent-bar {
 	#navBar{
 		display: block;
 	}
-}
+	#hr .accent-bar{
+		display:block;
+	} 
 
+}
+/*
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -218,4 +384,22 @@ hr.accent-bar {
   to {
     transform: translateY(-2000px);
   }
+}
+*/
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
 }

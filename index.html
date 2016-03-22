@@ -20,14 +20,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/animate.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
 <body>
-	<hr id="top" class="accent-bar">
-	<nav id="navbarMobile">
+	<nav id="navbarMobile" class="isOpen">
 		<ul>
 			<li><a href="#home">Home</a></li>
 			<li><a href="#work">Work</a></li>
@@ -35,7 +36,10 @@
 			<li><a href="#contact">Contact</a></li>
 			<li><a href="#blog">Blog</a></li>
 		</ul>
+		<a href="#" id="pull">tonymapelli</a>
+		<hr id="top" class="accent-bar">
 	</nav>
+	<hr id="top" class="accent-bar">
 	<div id="navBar" class="navbar">
 		<ul>
 			<li><a href='#home'>Home</a></li>
@@ -45,24 +49,58 @@
 			<li><a href='#contact'>Contact</a></li>
 		</ul>
 	</div>
-	<div id="container" class="container">
-		<div id='stars'></div>
-		<div id='stars2'></div>
-		<div id='stars3'></div>
-	</div>
+		<div id="container" class="container">
+			<div id='stars'></div>
+			<div id='stars2'></div>
+			<div id='stars3'></div>
+		</div>
 	<div id="home">
 		<div id="title">
 			<h1>TONY MAPELLI</h1>
-			<h2>MERCENARY <br> FOR HIRE</h2>
+			<h2>LOOKING FOR<br>A JOB</h2>
 			<p style="padding-top: 25px">Here is a brief text that hs some sci-fi references to looking for work/assembling a team. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloribus nemo sapiente quisquam rem facilis sed soluta doloremque cumque nulla, perspiciatis aliquam sit cum error obcaecati ipsam molestiae ratione a!</p>
 		</div>
 		<div id="hireBtn"></div>
-		<div id="scrollBtn"></div>
+		<!-- <i class="fa fa-angle-down scrollBtn"></i> -->
 	</div>
 	<div id="work" class="whiteCard">
 		<h2>Work Record</h2>
-		<div id="gridContainer"></div>
+		<div class="sectionContainer">
+			<div class="section group">
+				<div class="col span_1_of_4">
+				Example
+				</div>
+				<div class="col span_1_of_4">
+				Another Example
+				</div>
+				<div class="col span_1_of_4">
+				Lets now make it responsive
+				</div>
+				<div class="col span_1_of_4">
+				by adding breakpoints?
+				</div>
+			</div>
+		</div>
+		<div id="infoInside"></div>
+		<div class="sectionContainer">
+			<div class="section group">
+				<div class="col span_1_of_4">
+				EXAMPLE
+				</div>
+				<div class="col span_1_of_4">
+				Another Example
+				</div>
+				<div class="col span_1_of_4">
+				Lets now make it responsive
+				</div>
+				<div class="col span_1_of_4">
+				by adding breakpoints?
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<div id="info"></div>
 	<div id="blog">
 		<h2>Captain's Log</h2>
 		<p>Game Design, Web Design, Random Musings</p>
@@ -84,6 +122,43 @@
 	<script src="scripts/jquery-1.12.0.min.js"></script>
 	<script src="scripts/jquery.parallax.js"></script>
 	<!--Parallax here -->
+	<!--Jquery interactions-->
+	<script src="scripts/scroll.js"></script>
+	<script src="https://use.typekit.net/cni1wkk.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script>
 
+	$(document).ready(function(){
+		$(function() {
+	    var pull        = $('#pull');
+	        menu        = $('nav ul');
+	        menuHeight  = menu.height();
+	 
+		    $(pull).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		});
+
+		// $(".col").click(function(){
+	 //        $("#info").slideToggle();
+	 //        console.log('itworked?');
+	 //    });
+	    $(".col").click(function(){
+	        $("#infoInside").slideToggle();
+	        console.log('itworked?');
+	    });
+	});
+	
+
+	$(window).resize(function(){
+	    var w = $(window).width();
+	    if(w > 320 && menu.is(':hidden')) {
+	        menu.removeAttr('style');
+	    }
+	}); 
+
+	
+	</script>
 </body>
 </html>
